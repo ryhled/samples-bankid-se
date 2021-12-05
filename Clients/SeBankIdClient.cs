@@ -159,22 +159,20 @@ namespace Samples.BankId.SE.Clients
         {
             try
             {
-                var xmlString = signature.Decode();
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(xmlString);
+                var signatureString = signature.Decode();
+                XmlDocument root = new XmlDocument();
+                root.LoadXml(signatureString);
 
                 SignedXml signedXml = new();
-                signedXml.LoadXml(doc.GetElementsByTagName("Signature")[0] as XmlElement
+                signedXml.LoadXml(root.GetElementsByTagName("Signature")[0] as XmlElement
                     ?? throw new BankIdException("Failed to get signature xml element"));
 
                 XmlSignature signatureXml;
                 XmlSerializer serializer = new(typeof(XmlSignature));
-                using (TextReader reader = new StringReader(xmlString))
+                using (TextReader reader = new StringReader(signatureString))
                 {
                     signatureXml = serializer.Deserialize(reader) as XmlSignature ?? throw new Exception();
                 }
-                var sign = doc.GetElementsByTagName("Signature")[0];
-                var tst = sign?.SelectSingleNode("Object");
 
                 return new BankIdValidationResult
                 {
