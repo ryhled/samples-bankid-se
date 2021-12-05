@@ -8,7 +8,9 @@ namespace Samples.BankId.SE.Clients.Model
 
         public string? Error { get; init; }
 
-        public string? SignatureData { get; init; }
+        public string? VisibleData { get; init; }
+
+        public string? NonVisibleData { get; init; }
 
         public string? Signatory { get; init; }
 

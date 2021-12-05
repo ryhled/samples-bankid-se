@@ -105,7 +105,8 @@ namespace Samples.BankId.SE.Clients
             {
                 PersonalNumber = socialSecurityNumber,
                 EndUserIp = "176.10.189.252",
-                UserVisibleData = signingText.Encode()
+                UserVisibleData = signingText.Encode(),
+                UserNonVisibleData = "non-visible".Encode()
             });
 
             // Initialize signing
@@ -172,11 +173,14 @@ namespace Samples.BankId.SE.Clients
                 {
                     signatureXml = serializer.Deserialize(reader) as XmlSignature ?? throw new Exception();
                 }
+                var sign = doc.GetElementsByTagName("Signature")[0];
+                var tst = sign?.SelectSingleNode("Object");
 
                 return new BankIdValidationResult
                 {
                     Certificate = new X509Certificate2(Convert.FromBase64String(signatureXml.KeyInfo?.X509Data?.X509Certificate?[0] ?? throw new BankIdException())),
-                    SignatureData = Encoding.UTF8.GetString(Convert.FromBase64String(signatureXml.Object?.BankIdSignedData?.UsrVisibleData?.Text ?? throw new BankIdException())),
+                    VisibleData = Encoding.UTF8.GetString(Convert.FromBase64String(signatureXml.Object?.BankIdSignedData?.UsrVisibleData?.Text ?? throw new BankIdException())),
+                    NonVisibleData = Encoding.UTF8.GetString(Convert.FromBase64String(signatureXml.Object?.BankIdSignedData?.UsrNonVisibleData?.Text ?? throw new BankIdException())),
                     Valid = signedXml.CheckSignature()
                 };
             }

@@ -98,6 +98,17 @@ namespace Samples.BankId.SE.Clients.Model
         public string? Id { get; set; }
     }
 
+    [XmlRoot(ElementName = "usrNonVisibleData", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]
+    public class UsrNonVisibleData
+    {
+        [XmlAttribute(AttributeName = "visible")]
+        public string? Visible { get; set; }
+        [XmlAttribute(AttributeName = "charset")]
+        public string? Charset { get; set; }
+        [XmlText]
+        public string? Text { get; set; }
+    }
+
     [XmlRoot(ElementName = "usrVisibleData", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]
     public class UsrVisibleData
     {
@@ -175,6 +186,8 @@ namespace Samples.BankId.SE.Clients.Model
     [XmlRoot(ElementName = "bankIdSignedData", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]
     public class BankIdSignedData
     {
+        [XmlElement(ElementName = "usrNonVisibleData", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]
+        public UsrNonVisibleData? UsrNonVisibleData { get; set; }
         [XmlElement(ElementName = "usrVisibleData", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]
         public UsrVisibleData? UsrVisibleData { get; set; }
         [XmlElement(ElementName = "srvInfo", Namespace = "http://www.bankid.com/signature/v1.0.0/types")]

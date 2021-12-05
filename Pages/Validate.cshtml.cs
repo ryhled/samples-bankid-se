@@ -36,7 +36,8 @@ namespace Samples.BankId.SE.Pages
 
             Result = JsonSerializer.Serialize(new
             {
-                result.SignatureData,
+                result.VisibleData,
+                result.NonVisibleData,
                 result.Signatory,
                 result.Certificate?.Subject,
                 SimpleName = result.Certificate?.GetNameInfo(X509NameType.SimpleName, true),
