@@ -8,6 +8,8 @@ Covers:
 * Signing
 * Validation
 
+NOT any form of production-grade code, simple POC only ;).
+
 ## Install and setup Bank ID client for test use.
 
 [https://www.bankid.com/utvecklare/guider]
