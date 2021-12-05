@@ -31,6 +31,8 @@ In essence:
 4. Sign witrh uservisibledata that contain the abstract.
 5. UserNonVisibleData contains digest/checksum.
 
+There is no document size limitation and all types of documents can be signed.
+
 ## Install and setup Bank ID client for test use.
 
 1. Download bankid client from this link: https://install.bankid.com/FileDownloader?fileId=Win
