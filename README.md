@@ -20,6 +20,17 @@ Bank ID Autostart / launching docs: https://www.bankid.com/utvecklare/guider/tek
 
 Bank ID QR code docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/qrkoder
 
+### File signing
+
+Bank ID Advice here: https://www.bankid.com/en/utvecklare/guider/teknisk-integrationsguide/filsignering
+
+In essence:
+1. Show document to user.
+2. Compute checksum / digest.
+3. Compile document abstract of document content.
+4. Sign witrh uservisibledata that contain the abstract.
+5. UserNonVisibleData contains digest/checksum.
+
 ## Install and setup Bank ID client for test use.
 
 1. Download bankid client from this link: https://install.bankid.com/FileDownloader?fileId=Win
