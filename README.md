@@ -11,7 +11,7 @@ Covers:
 NOT any form of production-grade code, simple POC only ;).
 
 Bank ID API docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/webbservice-api
-Bank ID Guider: https://www.bankid.com/utvecklare/guider
+Bank ID Guides: https://www.bankid.com/utvecklare/guider
 
 ## Install and setup Bank ID client for test use.
 
