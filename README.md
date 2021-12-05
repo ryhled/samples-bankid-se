@@ -20,6 +20,8 @@ Bank ID Autostart / launching docs: https://www.bankid.com/utvecklare/guider/tek
 
 Bank ID QR code docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/qrkoder
 
+MS - Verifying xmldsig: https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-verify-the-digital-signatures-of-xml-documents
+
 ### File signing
 
 Bank ID Advice here: https://www.bankid.com/en/utvecklare/guider/teknisk-integrationsguide/filsignering
