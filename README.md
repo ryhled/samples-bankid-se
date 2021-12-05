@@ -1,5 +1,7 @@
 # Swedish Bank ID sample (.NET 6)
 
+Built and assembled from various docs and samples online.
+
 ## Install and setup Bank ID client for test use.
 
 [https://www.bankid.com/utvecklare/guider]
