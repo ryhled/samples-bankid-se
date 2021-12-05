@@ -1,4 +1,4 @@
-# Swedish Bank ID sample
+# Swedish Bank ID sample (.NET 6)
 
 ## Install and setup Bank ID client for test use.
 
@@ -13,8 +13,8 @@
 5. Issue new local bankid certificate, add password.
 
 
-### Get and prepare test certificate
+### Get client test certificate
 
-1. Download certificate from https://www.bankid.com/assets/bankid/rp/FPTestcert3_20200618.p12 (https://www.bankid.com/utvecklare/test)
+Download certificate from https://www.bankid.com/assets/bankid/rp/FPTestcert3_20200618.p12 (https://www.bankid.com/utvecklare/test) (included in project).
 
 
