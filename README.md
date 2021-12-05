@@ -1,4 +1,4 @@
-# Swedish Bank ID sample (.NET 6)
+# Swedish Bank ID sample (.NET 6, Bank ID v5)
 
 Built and assembled from various docs and samples online.
 
@@ -10,10 +10,10 @@ Covers:
 
 NOT any form of production-grade code, simple POC only ;).
 
-## Install and setup Bank ID client for test use.
+Bank ID API docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/webbservice-api
+Bank ID Guider: https://www.bankid.com/utvecklare/guider
 
-[https://www.bankid.com/utvecklare/guider]
-[https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/webbservice-api]
+## Install and setup Bank ID client for test use.
 
 1. Download bankid client from this link: https://install.bankid.com/FileDownloader?fileId=Win
 2. Install the bankid client.
