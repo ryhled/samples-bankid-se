@@ -2,6 +2,12 @@
 
 Built and assembled from various docs and samples online.
 
+Covers:
+
+* Authentication
+* Signing
+* Validation
+
 ## Install and setup Bank ID client for test use.
 
 [https://www.bankid.com/utvecklare/guider]
