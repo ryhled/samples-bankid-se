@@ -162,7 +162,7 @@ namespace Samples.BankId.SE.Clients
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(xmlString);
 
-                SignedXml signedXml = new SignedXml();
+                SignedXml signedXml = new();
                 signedXml.LoadXml(doc.GetElementsByTagName("Signature")[0] as XmlElement
                     ?? throw new BankIdException("Failed to get signature xml element"));
 

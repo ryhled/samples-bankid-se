@@ -6,13 +6,19 @@ Covers:
 
 * Authentication
 * Signing
-* Validation
+* Validation (currently only signature, BankID edvice 6 step process here: https://www.bankid.com/en/utvecklare/guider/teknisk-integrationsguide/verifiera-signaturer)
 
 NOT any form of production-grade code, simple POC only ;).
 
 Bank ID API docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/webbservice-api
 
 Bank ID Guides: https://www.bankid.com/utvecklare/guider
+
+Bank ID Xml Signature doc: https://docs.zignsec.com/wp-content/uploads/2018/05/BankID_SignatureProfile_v238004.pdf
+
+Bank ID Autostart / launching docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/programstart
+
+Bank ID QR code docs: https://www.bankid.com/utvecklare/guider/teknisk-integrationsguide/qrkoder
 
 ## Install and setup Bank ID client for test use.
 
