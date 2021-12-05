@@ -1,0 +1,27 @@
+﻿@page
+@model Samples.BankId.SE.Pages.ValidateModel
+
+@{
+    ViewData["Title"] = "Swedish BankID Sample App - Validate";
+}
+
+<div class="row">
+    <div class="col-sm-12 pb-4" style="background: #eee !important;">
+        <h3>Swedish BankID Sample App - Sign text</h3>
+        <form asp-page-handler="Validate" asp-antiforgery="true" method="post" class="mt-3">
+            <div class="form-group">
+                <label for="SigningText">Signature</label>
+                <input type="text" asp-for="Signature" class="form-control" />
+            </div>
+            <input class="btn btn-primary" type="submit" value="Validate" />
+        </form>
+        <p class="mt-3 mb-3 font-weight-bold">Status: @Model.StatusMessage</p>
+        <div class="row">
+            <div class="col"><hr></div>
+            <div class="col-auto">Result</div>
+            <div class="col"><hr></div>
+        </div>
+        <p>@Model.Result</p>
+    </div>
+</div>
+

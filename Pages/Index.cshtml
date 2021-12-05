@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Swedish BankID Sample App";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Swedish BankID Sample App</h1>
+    <h3>Configuration for BankID</h3>
+    <p>@Json.Serialize(Model.BankIdConfiguration)</p>
+</div>
